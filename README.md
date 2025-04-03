@@ -1,6 +1,7 @@
 Objectifs d'amélioration du fork
 
 Ce fork du projet task-app-nuxt a pour but d'améliorer plusieurs aspects du code et de l'application afin d'assurer une meilleure expérience utilisateur et un projet plus robuste.
+
 🔹 1. Stabilité
 
     Correction des éventuels crashs et erreurs non gérées.
