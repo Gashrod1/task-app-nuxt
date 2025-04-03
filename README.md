@@ -1,78 +1,45 @@
-# Gogrello
+Objectifs d'amélioration du fork
 
-> A task management app for the Go Green development team. Contact <williamw@plumbersstock.com> for issues or make a pull request.
+Ce fork du projet task-app-nuxt a pour but d'améliorer plusieurs aspects du code et de l'application afin d'assurer une meilleure expérience utilisateur et un projet plus robuste.
+🔹 1. Stabilité
 
-## MongoDB, Express, Vue/Nuxt, and Node
+    Correction des éventuels crashs et erreurs non gérées.
 
-### Build Setup
+    Upgrade du projet vers les dernières versions de Nuxt.js.
 
-``` bash
-# install dependencies
-$ npm run install
+🚀 2. Performance
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+    Amélioration des appels API pour limiter les requêtes inutiles à Firebase.
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+    Mise en place d'un lazy loading des composants et des ressources statiques.
 
-# generate static project
-$ npm run generate
-```
+🔒 3. Sécurité
 
-### Deploy Setup
+    Vérification et correction des failles potentielles (XSS, CSRF, injection SQL).
 
-``` bash
-# install node
-$ sudo apt install nodejs
-OR
-$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-$ node -v  # 12.16.3
 
-# install node
-$ sudo apt install npm
-$ npm -v # 6.14.4
+🎨 4. Ergonomie et accessibilité
 
-# Nginx Install
-$ apt-get install nginx
+    Ajout d'un mode sombre pour améliorer le confort d'utilisation.
 
-# pm2 Install
-$ npm install pm2 -g
+    Respect des normes d'accessibilité (contrastes, navigation clavier, ARIA).
 
-# cd into gogrello and install dependencies
-$ npm i
+    Amélioration de l'affichage mobile et responsive.
 
-# build for production and launch server
-$ npm run build
-$ pm2 start npm -- start
-```
-## Nginx Config
-```bash
-#/etc/nginx/sites-available/default
-server {
-listen 80;
-        server_name gogrello;
-        location / {
-                proxy_pass http://127.0.0.1:3000;
-                proxy_http_version 1.1;
-                proxy_set_header Upgrade $http_upgrade;
-                proxy_set_header Connection 'upgrade';
-                proxy_set_header Host $host;
-                proxy_cache_bypass $http_upgrade;
-        }
-}
-```
-```bash
-$ service nginx stop
-$ service nginx start
-```
+🛠 5. Anomalies (bugs)
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+    Correction des bugs connus et des problèmes relevés dans les pull requests et issues existantes.
 
-## Todo
-* Task Comments as array of comments and styled chronological and pretty
-* Multiple boards
-* Vuetify styling theme 
-* integrate JS date objects in all data, also fix sort by date
-* separate button templates from forms/modals to be more dynamic
+    Amélioration du système de gestion des tâches (ex : tâches qui disparaissent ou ne se mettent pas à jour correctement).
+
+    Correction des incohérences d'affichage et des éventuels problèmes de CSS.
+
+✨ 6. Fonctionnalités manquantes
+
+    Ajout d'un système de commentaires pour chaque tâche.
+
+    Intégration d'un système de notifications en temps réel.
+
+    Possibilité d'assigner plusieurs utilisateurs à une même tâche.
+
+    Ajout d'un filtre avancé pour trier les tâches par priorité, statut et date.
